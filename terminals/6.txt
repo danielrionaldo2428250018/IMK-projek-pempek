@@ -1,0 +1,6 @@
+---
+pid: 14276
+cwd: |
+  D:\Project IMK sistem pempek
+---
+PS D:\Project IMK sistem pempek>

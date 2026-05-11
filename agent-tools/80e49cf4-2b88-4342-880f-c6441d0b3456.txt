@@ -1,0 +1,1031 @@
+Identity Platform pricing | Google Cloud
+
+## Identity Platform pricing
+
+This document explains Identity Platform pricing details.
+
+If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply.
+
+## Pricing overview
+
+Identity Platform charges per Monthly Active User (MAU) for most sign-in methods. Any account that has signed in within a given month is considered an active user. Inactive users are stored at no cost.
+
+Phone and multi-factor authentication users are charged per message sent.
+
+## Pricing table
+
+Pricing for Identity Platform is divided into different tiers based on the authentication method used.
+
+To view current pricing, see [For phone authentication and multi-factor authentication](https://cloud.google.com/identity-platform/pricing#for-phone-authentication-and-multi-factor-authentication).
+
+To view usage metrics for your project, see [Viewing usage](https://cloud.google.com/identity-platform/pricing#viewing-usage).
+
+### Tier 1 providers
+
+- Email
+- Phone
+- Anonymous
+- Social
+
+Note: Anonymous users are not included in the count of monthly active users if you've enabled [automatic clean-up](https://firebase.google.com/docs/auth/web/anonymous-auth#auto-cleanup).
+
+Price per MAU ($)
+
+Monthly Active Users (MAU)
+
+0 count to 50,000 count
+
+$0.00 (Free) / 1 count, per 1 month / account
+
+50,000 count to 100,000 count
+
+$0.0055 / 1 count, per 1 month / account
+
+100,000 count to 1,000,000 count
+
+$0.0046 / 1 count, per 1 month / account
+
+1,000,000 count to 10,000,000 count
+
+$0.0032 / 1 count, per 1 month / account
+
+10,000,000 count and above
+
+$0.0025 / 1 count, per 1 month / account
+
+If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply.
+
+### Tier 2 providers
+
+- OpenID Connect (OIDC)
+- Security Assertion Markup Language (SAML)
+
+Price per MAU ($)
+
+Monthly Active Users (MAU)
+
+0 count to 50 count
+
+$0.00 (Free) / 1 count, per 1 month / project
+
+50 count and above
+
+$0.015 / 1 count, per 1 month / project
+
+If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply.
+
+### For phone authentication and multi-factor authentication
+
+The following table displays current prices for each SMS sent using phone and multi-factor authentication. The first ten SMS that you send per day are not billed.
+
+Regions
+
+Price per SMS sent ($)
+
+Andorra (AD)
+
+United Arab Emirates (AE)
+
+Afghanistan (AF)
+
+Antigua and Barbuda (AG)
+
+Anguilla (AI)
+
+Albania (AL)
+
+Armenia (AM)
+
+Angola (AO)
+
+Argentina (AR)
+
+American Samoa (AS)
+
+Austria (AT)
+
+Australia (AU)
+
+Aruba (AW)
+
+Åland Islands (AX)
+
+Azerbaijan (AZ)
+
+Bosnia and Herzegovina (BA)
+
+Barbados (BB)
+
+Bangladesh (BD)
+
+Belgium (BE)
+
+Burkina Faso (BF)
+
+Bulgaria (BG)
+
+Bahrain (BH)
+
+Burundi (BI)
+
+Benin (BJ)
+
+Saint Barthélemy (BL)
+
+Bermuda (BM)
+
+Brunei Darussalam (BN)
+
+Bolivia, Plurinational State of (BO)
+
+Bonaire, Sint Eustatius and Saba (BQ)
+
+Brazil (BR)
+
+Bahamas (BS)
+
+Bhutan (BT)
+
+Bouvet Island (BV)
+
+Botswana (BW)
+
+Belarus (BY)
+
+Belize (BZ)
+
+Canada (CA)
+
+Cocos (Keeling) Islands (CC)
+
+Congo, The Democratic Republic of the (CD)
+
+Central African Republic (CF)
+
+Congo (CG)
+
+Switzerland (CH)
+
+Côte d'Ivoire (CI)
+
+Cook Islands (CK)
+
+Chile (CL)
+
+Cameroon (CM)
+
+China (CN)
+
+Colombia (CO)
+
+Costa Rica (CR)
+
+Cuba (CU)
+
+Cabo Verde (CV)
+
+Curaçao (CW)
+
+Christmas Island (CX)
+
+Cyprus (CY)
+
+Czechia (CZ)
+
+Germany (DE)
+
+Djibouti (DJ)
+
+Denmark (DK)
+
+Dominica (DM)
+
+Dominican Republic (DO)
+
+Algeria (DZ)
+
+Ecuador (EC)
+
+Estonia (EE)
+
+Egypt (EG)
+
+Western Sahara (EH)
+
+Eritrea (ER)
+
+Spain (ES)
+
+Ethiopia (ET)
+
+Finland (FI)
+
+Fiji (FJ)
+
+Falkland Islands (Malvinas) (FK)
+
+Micronesia, Federated States of (FM)
+
+Faroe Islands (FO)
+
+France (FR)
+
+Gabon (GA)
+
+United Kingdom (GB)
+
+Grenada (GD)
+
+Georgia (GE)
+
+French Guiana (GF)
+
+Guernsey (GG)
+
+Ghana (GH)
+
+Gibraltar (GI)
+
+Greenland (GL)
+
+Gambia (GM)
+
+Guinea (GN)
+
+Guadeloupe (GP)
+
+Equatorial Guinea (GQ)
+
+Greece (GR)
+
+Guatemala (GT)
+
+South Georgia and the South Sandwich Islands (GS)
+
+Guam (GU)
+
+Guinea-Bissau (GW)
+
+Guyana (GY)
+
+Hong Kong (HK)
+
+Heard Island and McDonald Islands (HM)
+
+Honduras (HN)
+
+Croatia (HR)
+
+Haiti (HT)
+
+Hungary (HU)
+
+Indonesia (ID)
+
+Ireland (IE)
+
+Israel (IL)
+
+Isle of Man (IM)
+
+India (IN)
+
+British Indian Ocean Territory (IO)
+
+Iraq (IQ)
+
+Iran, Islamic Republic of (IR)
+
+Iceland (IS)
+
+Italy (IT)
+
+Jersey (JE)
+
+Jamaica (JM)
+
+Jordan (JO)
+
+Japan (JP)
+
+Kenya (KE)
+
+Kyrgyzstan (KG)
+
+Cambodia (KH)
+
+Kiribati (KI)
+
+Comoros (KM)
+
+Saint Kitts and Nevis (KN)
+
+Korea, Republic of (KR)
+
+Kuwait (KW)
+
+Cayman Islands (KY)
+
+Kazakhstan (KZ)
+
+Lao People's Democratic Republic (LA)
+
+Lebanon (LB)
+
+Saint Lucia (LC)
+
+Liechtenstein (LI)
+
+Sri Lanka (LK)
+
+Liberia (LR)
+
+Lesotho (LS)
+
+Lithuania (LT)
+
+Luxembourg (LU)
+
+Latvia (LV)
+
+Libya (LY)
+
+Morocco (MA)
+
+Monaco (MC)
+
+Moldova, Republic of (MD)
+
+Montenegro (ME)
+
+Saint Martin (French part) (MF)
+
+Madagascar (MG)
+
+Marshall Islands (MH)
+
+North Macedonia (MK)
+
+Mali (ML)
+
+Myanmar (MM)
+
+Mongolia (MN)
+
+Macao (MO)
+
+Northern Mariana Islands (MP)
+
+Martinique (MQ)
+
+Mauritania (MR)
+
+Montserrat (MS)
+
+Malta (MT)
+
+Mauritius (MU)
+
+Maldives (MV)
+
+Malawi (MW)
+
+Mexico (MX)
+
+Malaysia (MY)
+
+Mozambique (MZ)
+
+Namibia (NA)
+
+New Caledonia (NC)
+
+Niger (NE)
+
+Norfolk Island (NF)
+
+Nigeria (NG)
+
+Nicaragua (NI)
+
+Netherlands (NL)
+
+Norway (NO)
+
+Nepal (NP)
+
+Nauru (NR)
+
+Niue (NU)
+
+New Zealand (NZ)
+
+Oman (OM)
+
+Panama (PA)
+
+Peru (PE)
+
+French Polynesia (PF)
+
+Papua New Guinea (PG)
+
+Philippines (PH)
+
+Pakistan (PK)
+
+Poland (PL)
+
+Saint Pierre and Miquelon (PM)
+
+Pitcairn (PN)
+
+Puerto Rico (PR)
+
+Palestine, State of (PS)
+
+Portugal (PT)
+
+Palau (PW)
+
+Paraguay (PY)
+
+Qatar (QA)
+
+Réunion (RE)
+
+Romania (RO)
+
+Serbia (RS)
+
+Russian Federation (RU)
+
+Rwanda (RW)
+
+Saudi Arabia (SA)
+
+Solomon Islands (SB)
+
+Seychelles (SC)
+
+Sudan (SD)
+
+Sweden (SE)
+
+Singapore (SG)
+
+Saint Helena, Ascension and Tristan da Cunha (SH)
+
+Slovenia (SI)
+
+Svalbard and Jan Mayen (SJ)
+
+Slovakia (SK)
+
+Sierra Leone (SL)
+
+San Marino (SM)
+
+Senegal (SN)
+
+Somalia (SO)
+
+Suriname (SR)
+
+South Sudan (SS)
+
+Sao Tome and Principe (ST)
+
+El Salvador (SV)
+
+Sint Maarten (Dutch part) (SX)
+
+Syrian Arab Republic (SY)
+
+Eswatini (SZ)
+
+Turks and Caicos Islands (TC)
+
+Chad (TD)
+
+French Southern Territories (TF)
+
+Togo (TG)
+
+Thailand (TH)
+
+Tajikistan (TJ)
+
+Tokelau (TK)
+
+Timor-Leste (TL)
+
+Turkmenistan (TM)
+
+Tunisia (TN)
+
+Tonga (TO)
+
+Türkiye (TR)
+
+Trinidad and Tobago (TT)
+
+Tuvalu (TV)
+
+Taiwan (TW)
+
+Tanzania, United Republic of (TZ)
+
+Ukraine (UA)
+
+Uganda (UG)
+
+United States Minor Outlying Islands (UM)
+
+United States (US)
+
+Uruguay (UY)
+
+Uzbekistan (UZ)
+
+Holy See (Vatican City State) (VA)
+
+Saint Vincent and the Grenadines (VC)
+
+Venezuela, Bolivarian Republic of (VE)
+
+Virgin Islands, British (VG)
+
+Virgin Islands, U.S. (VI)
+
+Viet Nam (VN)
+
+Vanuatu (VU)
+
+Wallis and Futuna (WF)
+
+Samoa (WS)
+
+Republic of Kosovo (XK)
+
+Yemen (YE)
+
+Mayotte (YT)
+
+South Africa (ZA)
+
+Zambia (ZM)
+
+Zimbabwe (ZW)
+
+All other regions (ZZ)
+
+| $0.08 / 1 count, per 1 month / project |
+| --- |
+| $0.08 / 1 count, per 1 month / project |
+| $0.26 / 1 count, per 1 month / project |
+| $0.31 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.15 / 1 count, per 1 month / project |
+| $0.08 / 1 count, per 1 month / project |
+| $0.27 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.24 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.47 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.12 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.30 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.26 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.27 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.12 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.30 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.28 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.26 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.32 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.34 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.34 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.24 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.33 / 1 count, per 1 month / project |
+| $0.41 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.28 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.28 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.42 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.37 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.29 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.32 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.08 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.12 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.15 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.33 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.33 / 1 count, per 1 month / project |
+| $0.17 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.02 / 1 count, per 1 month / project |
+| $0.23 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.04 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.14 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.26 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.33 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.07 / 1 count, per 1 month / project |
+| $0.13 / 1 count, per 1 month / project |
+| $0.08 / 1 count, per 1 month / project |
+| $0.09 / 1 count, per 1 month / project |
+| $0.08 / 1 count, per 1 month / project |
+| $0.27 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.19 / 1 count, per 1 month / project |
+| $0.38 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.36 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.27 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.40 / 1 count, per 1 month / project |
+| $0.15 / 1 count, per 1 month / project |
+| $0.21 / 1 count, per 1 month / project |
+| $0.16 / 1 count, per 1 month / project |
+| $0.01 / 1 count, per 1 month / project |
+| $0.05 / 1 count, per 1 month / project |
+| $0.40 / 1 count, per 1 month / project |
+| $0.33 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.27 / 1 count, per 1 month / project |
+| $0.06 / 1 count, per 1 month / project |
+| $0.15 / 1 count, per 1 month / project |
+| $0.18 / 1 count, per 1 month / project |
+| $0.03 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.20 / 1 count, per 1 month / project |
+| $0.22 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.10 / 1 count, per 1 month / project |
+| $0.25 / 1 count, per 1 month / project |
+| $0.11 / 1 count, per 1 month / project |
+| $0.42 / 1 count, per 1 month / project |
+
+If you pay in a currency other than USD, the prices listed in your currency on [Cloud Platform SKUs](https://cloud.google.com/skus/) apply.
+
+## Cloud Run functions
+
+Any functions you create are billed at the normal Cloud Run functions rate. See the [pricing information for Cloud Run functions](https://cloud.google.com/functions/pricing) to learn more.
+
+## Viewing usage
+
+To view your current Identity Platform usage:
+
+1. Open the Billing page in the API Console. [Go to the billing page](https://console.cloud.google.com/billing)
+2. Open the Reports tab.
+3. Under Filters, select Identity Platform and Firebase Authentication from the Products dropdown menu.
+
+The chart shows your current billing amount. If your usage is below the free tier allowance, the graph will show a flat line.
+
+The table breaks down costs by authentication method. Phone and multi-factor charges are listed as Firebase Authentication.
+
+### View usage metrics
+
+To view detailed metrics on usage, do the following:
+
+1. In the API Console, go to the Metrics explorer page. [Go to Metrics explorer](https://console.cloud.google.com/monitoring/metrics-explorer).
+2. Select Project > Usage.
+3. Select the metric you want to view. For example, Sent SMS, Verified SMS, or Blocked SMS.
+4. Select Transform > None.
+5. Under Group by, select region_code using Sum.
+6. Click Add sort & limit.
+7. Under Datapoint alignment, select Sum over 1d.
+
+### View forecasted metrics
+
+To forecast costs from current usage, do the following:
+
+1. In the API Console, go to the Metrics explorer page. [Go to Metrics explorer](https://console.cloud.google.com/monitoring/metrics-explorer).
+2. Select Project > Usage > Sent SMS.
+3. Under Group by, select region_code.
+4. Filter out counts for previous months.
+
+### View SMS sent versus verified
+
+The Firebase console shows both sent and verified SMS usage metrics. Use the Metrics explorer page to view more detailed metrics. [Go to Metrics explorer](https://console.cloud.google.com/monitoring/metrics-explorer).
+
+If verification rates are very low in some regions, use [SMS regions](https://cloud.google.com/identity-platform/docs/admin/sms-regions) to create an allow or deny list. For example, you can block regions your app is not launched in or regions with low verification rates.
+
+## Pricing examples
+
+The following table includes example Identity Platform usage patterns for three variations of applications and services, and the potential cost per month.
+
+Authentication Type
+
+Example Application or Service
+
+Consumer App
+
+Enterprise SaaS
+
+Hybrid Service
+
+Anonymous users
+
+5,000
+
+0
+
+1,000
+
+Email users with or without password
+
+70,000
+
+45,000
+
+60,000
+
+Social users from Google, Facebook, etc.
+
+150,000
+
+0
+
+70,000
+
+Sub-total
+
+225,000 MAU
+
+50,000 * 0 = $0
+
+50,000 * 0.0055 = $275
+
+125,000 * 0.0046 = $575
+
+Sub-total: $850
+
+45,000 MAU
+
+45,000 * 0 = $0
+
+Sub-total: $0
+
+131,000 MAU
+
+50,000 * 0 = $0
+
+50,000 * 0.0055 = $275
+
+31,000 * 0.0046 = $143
+
+Sub-total: $418
+
+Phone / SMS Sent
+
+1,300 to Region US ($0.01 per SMS)
+
+0
+
+1,300 to Region CA ($0.01 per SMS)
+
+Sub-total
+
+1,300 SMS sent
+
+300 * Free = $0
+
+1,000 * 0.01 = $10
+
+Sub-total: $10
+
+$0
+
+2,300 SMS sent
+
+300 * Free = $0
+
+2,000 * 0.01 = $20
+
+Sub-total: $20
+
+Federated SAML users
+
+0
+
+2,000
+
+1,000
+
+Federated OIDC users
+
+0
+
+75,000
+
+9,000
+
+Sub-total
+
+$0
+
+77,000 MAU
+
+50 * 0 = $0
+
+76,950 * 0.015 = $1154
+
+Sub-total: $1154
+
+10,000 MAU
+
+50 * 0 = $0
+
+9,950 * 0.015 = $149
+
+Sub-total: $149
+
+Total cost (monthly)
+
+$860
+
+$1154
+
+$587
+
+The above examples demonstrate the following common usage trends:
+
+- Consumer Applications usually rely on users that sign up and sign in with credentials from social providers, or users created directly in Identity Platform using phone and email authentication. You might also want to make use of anonymous users who are testing your application and can be upgraded to full user accounts to maintain their state and user identifier. The above example also uses an SMS one-time password to sign in to the application.
+- Enterprise SaaS Services usually use federation to sign in to the service because organizations want to maintain centralized and organizational control of their identities. The above example still has some users who sign up for accounts within the Identity Platform service, but there are a large number of users who are using OIDC for federation. There are also some users who are using SAML federation.
+- Hybrid Services are a blend of customers, partners, employees, and anyone else who needs access to an application or service. The example above has a broad mix of sign-in methods by the creation of local accounts and the use of enterprise federation technologies like SAML and OIDC.
+
+## What's next
+
+- Read the [Identity Platform documentation](https://cloud.google.com/identity-platform/docs).
+- Try the [Pricing calculator](https://cloud.google.com/products/calculator).
+- Learn about [Identity Platform solutions and use cases](https://cloud.google.com/architecture?text=Identity%20Platform).
+
+## Request a custom quote
+
+With Google Cloud's pay-as-you-go pricing, you only pay for the services you use. Connect with our sales team to get a custom quote for your organization.
