@@ -29,7 +29,7 @@ function last6MonthLabels(): string[] {
 }
 
 export default function Dashboard() {
-  const { transactions, products, settings } = useStore();
+  const { transactions, products } = useStore();
   const { logout, username } = useAuth();
 
   const now = new Date();
@@ -75,10 +75,6 @@ export default function Dashboard() {
   }));
 
   const recent = transactions.slice(0, 6);
-
-  const lowStock = products
-    .filter((p) => p.stock <= settings.lowStockThreshold)
-    .sort((a, b) => a.stock - b.stock);
 
   return (
     <div className="page">
@@ -141,9 +137,9 @@ export default function Dashboard() {
           <div style={{ fontSize: "0.8rem", color: "var(--color-muted)", marginTop: "0.25rem" }}>Hari ini</div>
         </div>
         <div className="card">
-          <div style={{ fontSize: "0.75rem", color: "var(--color-muted)", fontWeight: 600 }}>Stok menipis</div>
-          <div style={{ fontSize: "1.35rem", fontWeight: 700, marginTop: "0.35rem", color: lowStock.length ? "#e65100" : "var(--color-text)" }}>{lowStock.length}</div>
-          <div style={{ fontSize: "0.8rem", color: "var(--color-muted)", marginTop: "0.25rem" }}>≤ {settings.lowStockThreshold} unit</div>
+          <div style={{ fontSize: "0.75rem", color: "var(--color-muted)", fontWeight: 600 }}>Total produk</div>
+          <div style={{ fontSize: "1.35rem", fontWeight: 700, marginTop: "0.35rem" }}>{products.length}</div>
+          <div style={{ fontSize: "0.8rem", color: "var(--color-muted)", marginTop: "0.25rem" }}>Terdaftar di sistem</div>
         </div>
       </div>
 
@@ -163,22 +159,6 @@ export default function Dashboard() {
           </ResponsiveContainer>
         </div>
       </div>
-
-      {lowStock.length > 0 ? (
-        <div className="card" style={{ marginBottom: "1rem", border: "1px solid rgba(230,81,0,0.35)", background: "#fff8f0" }}>
-          <div style={{ fontWeight: 700, marginBottom: "0.5rem", color: "#bf360c" }}>Peringatan stok</div>
-          <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "0.88rem", color: "var(--color-text)" }}>
-            {lowStock.map((p) => (
-              <li key={p.id} style={{ marginBottom: "0.25rem" }}>
-                <Link to={`/produk/${p.id}/edit`} style={{ color: "var(--color-primary-dark)", fontWeight: 600 }}>
-                  {p.name}
-                </Link>{" "}
-                — sisa <strong>{p.stock}</strong>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
 
       <div style={{ fontWeight: 700, marginBottom: "0.65rem", color: "var(--color-primary-dark)" }}>Menu Cepat</div>
       <div

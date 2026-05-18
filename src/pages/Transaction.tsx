@@ -63,8 +63,7 @@ export default function Transaction() {
     const p = products.find((x) => x.id === pid);
     if (!p) return;
     const cur = cart[pid] ?? 0;
-    const next = Math.max(0, Math.min(p.stock, cur + delta));
-    setQty(pid, next);
+    setQty(pid, Math.max(0, cur + delta));
   }
 
   function applyDiscPct(pct: number) {
@@ -79,7 +78,7 @@ export default function Transaction() {
     }
     const tx = checkout(m, payment, discount);
     if (!tx) {
-      push("Keranjang kosong atau stok tidak mencukupi.", "error");
+      push("Keranjang masih kosong.", "error");
       return;
     }
     push("Transaksi berhasil.", "success");
@@ -152,7 +151,6 @@ export default function Transaction() {
               ) : null}
               <div style={{ fontSize: "0.72rem", color: "var(--color-muted)" }}>{getCategoryName(p.categoryId)}</div>
               <div style={{ fontSize: "0.75rem", color: "var(--color-muted)" }}>{formatIdr(p.price)}</div>
-              <div style={{ fontSize: "0.72rem", color: "var(--color-muted)" }}>Stok: {p.stock}</div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "0.45rem" }}>
                 <button type="button" className="btn btn--ghost" style={{ padding: "0.35rem 0.55rem" }} onClick={() => bump(p.id, -1)}>
                   −

@@ -63,7 +63,8 @@ export default function ManageProducts() {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontWeight: 700 }}>{p.name}</div>
                 <div style={{ fontSize: "0.8rem", color: "var(--color-muted)" }}>
-                  {p.sku ? `${p.sku} · ` : null}Stok {p.stock} · {formatIdr(p.price)} · margin ±{marginPercent(p.price, p.costPrice)}%
+                  {p.sku ? `${p.sku} · ` : null}
+                  {formatIdr(p.price)} · margin ±{marginPercent(p.price, p.costPrice)}%
                 </div>
               </div>
               <Link to={`/produk/${p.id}/edit`} className="btn btn--ghost" style={{ padding: "0.45rem 0.6rem" }} aria-label="Edit">

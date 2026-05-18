@@ -15,7 +15,6 @@ export default function Profile() {
   const [address, setAddress] = useState(settings.address);
   const [phone, setPhone] = useState(settings.phone);
   const [taxPercent, setTaxPercent] = useState(String(settings.taxPercent));
-  const [lowStockThreshold, setLowStockThreshold] = useState(String(settings.lowStockThreshold));
   const [adminWhatsApp, setAdminWhatsApp] = useState(settings.adminWhatsApp);
 
   const [nameInput, setNameInput] = useState(username);
@@ -42,11 +41,9 @@ export default function Profile() {
   function savePreferences(e: React.FormEvent) {
     e.preventDefault();
     const tax = Number(taxPercent.replace(",", ".")) || 0;
-    const low = Number(lowStockThreshold.replace(/\D/g, "")) || 0;
     const wa = adminWhatsApp.replace(/\D/g, "");
     updateSettings({
       taxPercent: tax,
-      lowStockThreshold: low,
       adminWhatsApp: wa,
     });
     push("Preferensi disimpan.", "success");
@@ -159,20 +156,13 @@ export default function Profile() {
       </form>
 
       <form onSubmit={savePreferences} className="card" style={{ marginBottom: "1rem" }}>
+
         <h2 style={{ margin: "0 0 1rem", fontSize: "1rem", color: "var(--color-primary-dark)" }}>Preferensi toko</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-          <div className="profile-field">
-            <label className="label" htmlFor="tx">
-              Pajak % (setelah diskon)
-            </label>
-            <input id="tx" className="input" inputMode="decimal" value={taxPercent} onChange={(e) => setTaxPercent(e.target.value)} />
-          </div>
-          <div className="profile-field">
-            <label className="label" htmlFor="ls">
-              Ambang stok menipis
-            </label>
-            <input id="ls" className="input" inputMode="numeric" value={lowStockThreshold} onChange={(e) => setLowStockThreshold(e.target.value)} />
-          </div>
+        <div className="profile-field">
+          <label className="label" htmlFor="tx">
+            Pajak % (setelah diskon)
+          </label>
+          <input id="tx" className="input" inputMode="decimal" value={taxPercent} onChange={(e) => setTaxPercent(e.target.value)} />
         </div>
         <div className="profile-field" style={{ marginTop: "0.5rem" }}>
           <label className="label" htmlFor="wa">
@@ -216,7 +206,6 @@ export default function Profile() {
               setAddress(DEFAULT_SETTINGS.address);
               setPhone(DEFAULT_SETTINGS.phone);
               setTaxPercent(String(DEFAULT_SETTINGS.taxPercent));
-              setLowStockThreshold(String(DEFAULT_SETTINGS.lowStockThreshold));
               setAdminWhatsApp(DEFAULT_SETTINGS.adminWhatsApp);
               setNameInput("admin");
               push("Semua data telah dikosongkan.", "info");

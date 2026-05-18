@@ -5,12 +5,16 @@ const DEFAULT_SETTINGS: OutletSettings = {
   address: "Jl. Contoh No. 123, Palembang",
   phone: "+62 812-3456-7890",
   taxPercent: 0,
-  lowStockThreshold: 10,
   adminWhatsApp: "",
 };
 
 function asRecord(v: unknown): Record<string, unknown> {
   return v && typeof v === "object" ? (v as Record<string, unknown>) : {};
+}
+
+/** Pastikan produk tidak membawa field legacy (mis. stock). */
+export function toProduct(id: string, row: Omit<Product, "id"> | Record<string, unknown>): Product {
+  return normalizeProduct({ ...row, id });
 }
 
 export function normalizeProduct(row: Record<string, unknown>): Product {
@@ -24,7 +28,6 @@ export function normalizeProduct(row: Record<string, unknown>): Product {
     name: String(row.name ?? ""),
     price,
     costPrice: Math.max(0, cost),
-    stock: Number(row.stock) || 0,
     categoryId: String(row.categoryId ?? ""),
     description: String(row.description ?? ""),
     imageUrl: String(row.imageUrl ?? ""),
@@ -91,6 +94,7 @@ function normalizeTransaction(row: Record<string, unknown>, productsById: Map<st
 
 function normalizeSettings(row: unknown): OutletSettings {
   const r = asRecord(row);
+  // Abaikan lowStockThreshold dari data lama
   return {
     outletName: typeof r.outletName === "string" && r.outletName.trim() ? r.outletName : DEFAULT_SETTINGS.outletName,
     address: typeof r.address === "string" ? r.address : DEFAULT_SETTINGS.address,
@@ -99,10 +103,6 @@ function normalizeSettings(row: unknown): OutletSettings {
       typeof r.taxPercent === "number" && !Number.isNaN(r.taxPercent)
         ? Math.min(100, Math.max(0, r.taxPercent))
         : DEFAULT_SETTINGS.taxPercent,
-    lowStockThreshold:
-      typeof r.lowStockThreshold === "number" && !Number.isNaN(r.lowStockThreshold)
-        ? Math.max(0, Math.floor(r.lowStockThreshold))
-        : DEFAULT_SETTINGS.lowStockThreshold,
     adminWhatsApp:
       typeof r.adminWhatsApp === "string" ? r.adminWhatsApp.replace(/\D/g, "") : DEFAULT_SETTINGS.adminWhatsApp,
   };

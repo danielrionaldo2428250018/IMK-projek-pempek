@@ -11,7 +11,6 @@ export interface Product {
   price: number;
   /** Harga pokok / modal per unit (untuk estimasi margin & laba) */
   costPrice: number;
-  stock: number;
   categoryId: string;
   description: string;
   imageUrl: string;
@@ -45,8 +44,6 @@ export interface OutletSettings {
   phone: string;
   /** Pajak tambahan % (mis. 11 untuk PPN), dihitung setelah diskon */
   taxPercent: number;
-  /** Ambang peringatan stok menipis */
-  lowStockThreshold: number;
   /** Nomor WhatsApp admin (hanya angka, min. 8 digit). Kosong = tautan bantuan dinonaktifkan sampai diisi di Profil */
   adminWhatsApp: string;
 }

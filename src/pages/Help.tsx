@@ -18,8 +18,8 @@ const items: { q: string; a: string }[] = [
     a: "Tampilan kosong berarti belum ada produk atau transaksi tercatat. Tambah kategori dan produk lewat menu Kelola Produk, lalu gunakan Kasir untuk mencatat penjualan.",
   },
   {
-    q: "Tombol Bayar tidak jalan atau muncul pesan stok",
-    a: "Pastikan jumlah yang dipesan tidak melebihi stok yang tercatat. Perbarui stok di edit produk. Pastikan juga minimal satu item di keranjang sebelum membayar.",
+    q: "Tombol Bayar tidak jalan",
+    a: "Pastikan minimal satu item ada di keranjang sebelum membayar. Jika masih gagal, muat ulang halaman atau periksa apakah produk masih terdaftar.",
   },
   {
     q: "Saya tidak bisa menambah produk — tidak ada kategori",

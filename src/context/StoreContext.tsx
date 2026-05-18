@@ -7,11 +7,12 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { DEFAULT_SETTINGS, normalizeAppState } from "../state/migrate";
+import { DEFAULT_SETTINGS, normalizeAppState, toProduct } from "../state/migrate";
 import type { AppState, Category, OutletSettings, PaymentMethod, Product, Transaction } from "../types";
 
-/** Versi baru: data awal kosong; data lama (v1) tidak dibaca otomatis. */
-const STORAGE_KEY = "pempek_novi_store_v3";
+/** v4: tanpa stok; migrasi otomatis dari v3/v1. */
+const STORAGE_KEY = "pempek_novi_store_v4";
+const LEGACY_STORAGE_KEYS = ["pempek_novi_store_v3", "pempek_novi_store_v1"];
 
 function uid(): string {
   return crypto.randomUUID();
@@ -27,20 +28,27 @@ function buildInitialState(): AppState {
 }
 
 function loadState(): AppState {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw) as unknown;
-      return normalizeAppState(parsed);
+  const keys = [STORAGE_KEY, ...LEGACY_STORAGE_KEYS];
+  for (const key of keys) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) continue;
+      const parsed = normalizeAppState(JSON.parse(raw) as unknown);
+      if (key !== STORAGE_KEY) {
+        persist(parsed);
+        localStorage.removeItem(key);
+      }
+      return parsed;
+    } catch {
+      /* coba key berikutnya */
     }
-  } catch {
-    /* ignore */
   }
   return buildInitialState();
 }
 
 function persist(state: AppState) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  const clean = normalizeAppState(state);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(clean));
 }
 
 type StoreContextValue = {
@@ -80,16 +88,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   );
 
   const addProduct = useCallback((p: Omit<Product, "id">) => {
+    const id = uid();
     setState((s) => ({
       ...s,
-      products: [...s.products, { ...p, id: uid() }],
+      products: [...s.products, toProduct(id, p)],
     }));
   }, []);
 
   const updateProduct = useCallback((id: string, p: Omit<Product, "id">) => {
     setState((s) => ({
       ...s,
-      products: s.products.map((x) => (x.id === id ? { ...p, id } : x)),
+      products: s.products.map((x) => (x.id === id ? toProduct(id, p) : x)),
     }));
   }, []);
 
@@ -121,10 +130,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           typeof patch.taxPercent === "number"
             ? Math.min(100, Math.max(0, patch.taxPercent))
             : s.settings.taxPercent,
-        lowStockThreshold:
-          typeof patch.lowStockThreshold === "number"
-            ? Math.max(0, Math.floor(patch.lowStockThreshold))
-            : s.settings.lowStockThreshold,
       },
     }));
   }, []);
@@ -136,7 +141,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       for (const p of s.products) {
         const qty = cart.get(p.id) ?? 0;
         if (qty <= 0) continue;
-        if (qty > p.stock) return s;
         items.push({
           productId: p.id,
           name: p.name,
@@ -153,12 +157,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const tax = Math.round((afterDisc * s.settings.taxPercent) / 100);
       const grandTotal = afterDisc + tax;
 
-      const nextProducts = s.products.map((p) => {
-        const qty = cart.get(p.id) ?? 0;
-        if (qty <= 0) return p;
-        return { ...p, stock: p.stock - qty };
-      });
-
       tx = {
         id: uid(),
         createdAt: new Date().toISOString(),
@@ -172,7 +170,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
       return {
         ...s,
-        products: nextProducts,
         transactions: [tx, ...s.transactions],
       };
     });
@@ -180,6 +177,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const clearAllData = useCallback(() => {
+    for (const key of LEGACY_STORAGE_KEYS) localStorage.removeItem(key);
     const fresh = buildInitialState();
     setState(fresh);
     persist(fresh);

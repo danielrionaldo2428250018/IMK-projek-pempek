@@ -15,7 +15,6 @@ export default function ProductForm() {
   const [sku, setSku] = useState("");
   const [price, setPrice] = useState("");
   const [costPrice, setCostPrice] = useState("");
-  const [stock, setStock] = useState("");
   const [categoryId, setCategoryId] = useState("");
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -29,7 +28,6 @@ export default function ProductForm() {
     setSku(p.sku);
     setPrice(String(p.price));
     setCostPrice(String(p.costPrice));
-    setStock(String(p.stock));
     setCategoryId(p.categoryId);
     setDescription(p.description);
     setImageUrl(p.imageUrl);
@@ -55,7 +53,6 @@ export default function ProductForm() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const pr = prNum;
-    const st = Number(stock.replace(/\D/g, "")) || 0;
     const cost = Math.max(0, Math.min(pr, costNum));
     if (!name.trim()) return;
 
@@ -74,7 +71,6 @@ export default function ProductForm() {
       sku: sku.trim(),
       price: pr,
       costPrice: cost,
-      stock: st,
       categoryId: cat,
       description: description.trim(),
       imageUrl: imageUrl.trim() || "https://picsum.photos/seed/placeholder/400/300",
@@ -152,13 +148,6 @@ export default function ProductForm() {
             Estimasi margin kotor: <strong>{marginPercent(prNum, costNum)}%</strong>
           </p>
         ) : null}
-
-        <div>
-          <label className="label" htmlFor="st">
-            Stok
-          </label>
-          <input id="st" className="input" inputMode="numeric" value={stock} onChange={(e) => setStock(e.target.value)} required />
-        </div>
 
         <div>
           <label className="label" htmlFor="cat">
